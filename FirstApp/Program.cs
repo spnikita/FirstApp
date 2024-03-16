@@ -6,9 +6,15 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            string myName = "Nikita";
+            string MyName = "Nikita";
+            byte MyAge = 30;
+            bool HaveIApet = true;
+            double MyShoeSize = 46;
 
-            Console.WriteLine(myName);
+            Console.WriteLine("My name is " + MyName);
+            Console.WriteLine("MyAge " + MyAge);
+            Console.WriteLine("Do I have a pet? " + HaveIApet);
+            Console.WriteLine("My shoe size is " + MyShoeSize);
 
             Console.ReadKey();
         }
