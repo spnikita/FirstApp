@@ -6,17 +6,21 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            string MyName = "Nikita";
-            byte MyAge = 30;
-            bool HaveIApet = true;
-            double MyShoeSize = 46;
+            DaysOfWeek MyFavoriteDay;
 
-            Console.WriteLine("My name is " + MyName);
-            Console.WriteLine("MyAge " + MyAge);
-            Console.WriteLine("Do I have a pet? " + HaveIApet);
-            Console.WriteLine("My shoe size is " + MyShoeSize);
+            MyFavoriteDay = DaysOfWeek.Friday;
+
+            Console.WriteLine(MyFavoriteDay);
 
             Console.ReadKey();
         }
+    }
+
+    enum DaysOfWeek : byte
+    {
+        Tuesday,
+        Monday,
+        Wednesday,
+        Friday
     }
 }
