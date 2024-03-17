@@ -12,7 +12,7 @@ namespace FirstApp
 
             Console.Write("Enter your age: ");
 
-            var age = Convert.ToInt32(Console.ReadLine());
+            var age = checked((byte)int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Your name is {0} and age is {1}", name, age);
 
