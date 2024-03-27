@@ -6,41 +6,54 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-			Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
 
-			var color = Console.ReadLine();
+            for (int k = 0; k < 3; k++)
+            {
 
-			if (color == "red")
-			{
-				Console.BackgroundColor = ConsoleColor.Red;
-				Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("Введите имя");
 
-				Console.WriteLine("Your color is red!");
-			}
-			else if (color == "green")
-			{
-				Console.BackgroundColor = ConsoleColor.Green;
-				Console.ForegroundColor = ConsoleColor.Black;
+                User.Name = Console.ReadLine();
 
-				Console.WriteLine("Your color is green!");
-			}
-			else
-			{
-				Console.BackgroundColor = ConsoleColor.Cyan;
-				Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("Введите фамилию");
 
-				Console.WriteLine("Your color is cyan!");
-			}
+                User.LastName = Console.ReadLine();
 
-			Console.ReadKey();
+                Console.WriteLine("Введите логин");
+
+                User.Login = Console.ReadLine();
+
+                User.LoginLength = User.Login.Length;
+
+                Console.WriteLine("Есть ли у вас животные? Да или Нет");
+
+                var result = Console.ReadLine();
+
+                User.HasPet = result == "Да";
+
+                Console.WriteLine("Введите возраст пользователя");
+
+                User.Age = double.Parse(Console.ReadLine());
+
+                User.favcolors = new string[3];
+
+                Console.WriteLine("Введите три любимых цвета пользователя");
+
+                for (int i = 0; i < User.favcolors.Length; i++)
+                {
+                    User.favcolors[i] = Console.ReadLine();
+                }
+
+                Console.ReadKey();
+            }
         }
-    }
 
-    enum DaysOfWeek : byte
-    {
-        Tuesday,
-        Monday,
-        Wednesday,
-        Friday
+        enum DaysOfWeek : byte
+        {
+            Tuesday,
+            Monday,
+            Wednesday,
+            Friday
+        }
     }
 }
